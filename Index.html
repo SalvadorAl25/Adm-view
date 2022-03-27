@@ -18,7 +18,7 @@
             referrerpolicy="no-referrer"
             />
 
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="./Styles/styles.css">
 
 
         <title>Api AppLab.mx Test</title>
@@ -33,9 +33,6 @@
                         <input type="search" class="form-control searchGlo"
                             placeholder="Buscar" aria-label="Buscar"
                             aria-describedby="basic-addon1">
-                        <button type="submit" value="buscar" class="btn
-                            btn-outline-primary"><i class="fa-solid
-                                fa-magnifying-glass"></i></button>
                     </div>
                 </div>
                 <div class="col">
@@ -65,6 +62,17 @@
                             </select>
                         </div>
                         <div class="col-3" id="selRole">
+                            <select class="form-select selectRole" id="rolesnames" aria-label="Default select example">
+                                <option selected>Area</option>
+                                <option id=1>Administrador</option>
+                                <option id=2>Recursos Humanos</option>
+                                <option id=3>Contabilidad</option>
+                                <option id=4>Sistemas</option>
+                                <option id=5>Almacen</option>
+                                <option id=6>Acondicionamiento</option>
+                                <option id=7>Calidad</option>
+                                <option id=8>Mantenimiento</option>
+                            </select>
                         </div>
                         <div class="col-3">
                             <button type="button" onclick="deleteFilters()"
@@ -92,7 +100,7 @@
             </div>
         </div>
         <script src="./js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="./main.js"></script>
+        <script type="text/javascript" src="./js/main.js"></script>
     </body>
 
 </html>

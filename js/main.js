@@ -47,32 +47,9 @@ const mostrarData = (data) => {
     document.getElementById('data').innerHTML = body
 }
 
-
-fetch(url + "roles", {
-        mode: "cors"
-    })
-    .then(res => res.json())
-    .then(datarole => mostrarRoles(datarole))
-    .catch(e => console.log(e));
-
-
-const mostrarRoles = (data) => {
-    let selComplete = ''
-    let sel = ''
-    for (let i = 0; i < data.length; i++) {
-        sel += `<option id="${data[i].roleId}">${data[i].roleName}</option>`
-    }
-    selComplete = `<select class="form-select selectRole" id="rolesnames" aria-label="Default select example">
-                        <option selected>Area</option>` +
-        sel + `
-                    </select>`
-    document.getElementById('selRole').innerHTML = selComplete
-}
-
 function statusFilter(input, selector) {
     d.addEventListener("change", e => {
         if (e.target.matches(input)) {
-            console.log(e.target.value);
             d.querySelectorAll(selector).forEach(el =>
                 (el.textContent.includes(e.target.value)) ?
                 el.classList.remove("filter") :
@@ -94,7 +71,6 @@ function deleteFilters() {
 function roleFilter(input, selector) {
     d.addEventListener("change", e => {
         if (e.target.matches(input)) {
-            console.log(e.target.value);
             d.querySelectorAll(selector).forEach(el =>
                 (el.textContent.includes(e.target.value)) ?
                 el.classList.remove("filter") :
@@ -113,7 +89,6 @@ function searchTable(input, selector) {
 
     d.addEventListener("keyup", e => {
         if (e.target.matches(input)) {
-            console.log(e.target.value);
             d.querySelectorAll(selector).forEach(el =>
                 (el.textContent.toLowerCase().includes(e.target.value)) ?
                 el.classList.remove("filter") :
@@ -122,9 +97,13 @@ function searchTable(input, selector) {
     })
 }
 
-function editarUsuario(id) {
-    location.href = "edit.html?id=" + id;
+function editUser(id) {
+    location.href = "editUser.html?id=" + id;
 
+}
+
+function viewUser(id){
+    location.href = "viewUser.html?id=" + id;
 }
 
 function deleteUser(id) {
