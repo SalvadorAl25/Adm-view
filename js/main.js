@@ -1,4 +1,5 @@
 const url = "http://localhost:8018/api/"
+const APIFILEUPDATE_URL = 'http://localhost:8018/file/'
 d = document
 
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -107,6 +108,15 @@ function viewUser(id){
 }
 
 function deleteUser(id) {
+    
+    fetch(url + 'user/' + id, {
+        method: 'GET',
+        mode: 'cors'
+      })
+        .then(res => res.json())
+        .then(data => {console.log(data); imgDelete(data)})
+        .catch(e => console.log(e))
+
     fetch(url + 'user', {
             method: 'DELETE',
             headers: {
@@ -120,4 +130,13 @@ function deleteUser(id) {
         .then(dat => console.log(dat))
         .catch(err => console.log(err));
     location.reload();
+}
+
+const imgDelete = (data) => {
+    fetch(APIFILEUPDATE_URL + 'delete/' + data.imgProfile, {
+        method: 'DELETE'
+      })
+        .then(response => response.blob())
+        .then(data => console.log(data))
+        .catch(e => console.log(e))
 }

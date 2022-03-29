@@ -16,36 +16,35 @@ function saveNewUser () {
   const imgName = img.name;
   const nameFile = img.name.split('.')
   const ext = nameFile[1]
+  
 
   // datos del usuario
   const usuario = document.forms['usuario']
   const nom = usuario['nom'].value
   const lastName = usuario['lastNam'].value
   const mail = usuario['mail'].value
-  const statusInt = usuario['status'].value
-  const status = false
+  let statusInt = usuario['status'].value
+  var statusbol = false
   const rolIdSt = usuario['selRole'].value
   const rolId = parseInt(rolIdSt)
   var combo = document.getElementById('selRole')
   var rolName = combo.options[combo.selectedIndex].text
+  var newNameImg ='profile-image-id_' + mail+'_'+rolName + '.' + ext;
 
   const imgData = new FormData()
-  imgData.append('files', img); // , 'profile-image-id_' + 1 + '.' + ext
+  imgData.append('files', img, newNameImg);
 
-  switch (statusInt) {
-    case 1:
-      status = true
-      break
-    case 0:
-      status = false
-  }
+  if (statusInt == 1)
+    statusbol = true
+  else
+    statusbol = false
 
   const dataForm = {
     userName: nom,
     userLastName: lastName,
     userEmail: mail,
-    status: status,
-    imgProfile: imgName,
+    status: statusbol,
+    imgProfile: newNameImg,
     role: [
       {
         roleId: rolId,
@@ -63,7 +62,6 @@ function saveNewUser () {
       'Content-Type': 'application/json'
     }
   })
-    .then(res => res.json())
     .then(res => console.log('Success:', res))
 
 //---------envio de imagen al servidor-------

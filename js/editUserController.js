@@ -13,6 +13,7 @@ fetch(url + 'user/' + id, {
   .catch(e => console.log(e))
 
 const mostrarData = (data) => {
+  let id = data.userId
   let name = data.userName
   let lastName = data.userLastName
   let email = data.userEmail
@@ -32,6 +33,7 @@ const mostrarData = (data) => {
   let role = data.role[0]
   let roleId = role.roleId
 
+  document.getElementById('userId').value = id
   document.getElementById('nom').value = name
   document.getElementById('lastNam').value = lastName
   document.getElementById('mail').value = email
@@ -64,47 +66,125 @@ imgUp.addEventListener('change', () => {
 })
 
 function editarUsuario () {
-  // ------imagen de perfil
-  if (ban == true) {
-    const img = imgUp.files[0]
-    const imgName = img.name
-    const nameFile = img.name.split('.')
-    const ext = nameFile[1]
-  }
-  else{
-    var imgUser = document.getElementById('imgUser').src
-    console.log(imgUser)
+  fetch(url + 'user/' + id, {
+    method: 'GET',
+    mode: 'cors'
+  })
+    .then(res => res.json())
+    .then(data => {
+      if (ban === true)
+        imgChange(data)
+      else
+        imgNotChange(data)
+    })
+    .catch(e => console.log(e))
+}
+
+const imgChange = (data) => {
+  // -----elimina la imagen actual
+  if (data.imgProfile !== null) {
+    fetch(APIFILEUPDATE_URL + 'delete/' + data.imgProfile, {
+      method: 'DELETE'
+    })
+      .then(response => response.blob())
+      .then(data => console.log(data))
+      .catch(e => console.log(e))
   }
 
+
+  // ------imagen de perfil
+  const img = imgUp.files[0]
+  const imgName = img.name
+  const nameFile = imgName.name.split('.')
+  const ext = nameFile[1]
 
   // ------datos del usuario
   const usuario = document.forms['usuario']
+  const id = usuario['userId'].value
   const nom = usuario['nom'].value
   const lastName = usuario['lastNam'].value
   const mail = usuario['mail'].value
-  const statusInt = usuario['status'].value
-  const status = false
+  let statusInt = usuario['status'].value
+  var statusbol = false
+  const rolIdSt = usuario['selRole'].value
+  const rolId = parseInt(rolIdSt)
+  var combo = document.getElementById('selRole')
+  var rolName = combo.options[combo.selectedIndex].text
+  var newNameImg ='profile-image-id_' + id+'_'+rolName + '.' + ext;
+
+  const imgData = new FormData()
+  imgData.append('files', img,newNameImg);
+
+  if (statusInt == 1)
+    statusbol = true
+  else
+    statusbol = false
+
+  const dataForm = {
+    userId: id,
+    userName: nom,
+    userLastName: lastName,
+    userEmail: mail,
+    status: statusbol,
+    imgProfile: newNameImg,
+    role: [
+      {
+        roleId: rolId,
+        roleName: rolName
+      }
+    ]
+  }
+  console.log(dataForm)
+  // --------modifica los datos en el servidor
+  fetch(url + 'user', {
+    method: 'POST',
+    body: JSON.stringify(dataForm),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+    .then(res => res.json())
+    .then(res => console.log('Success:', res))
+  // ---------envio de imagen al servidor-------
+  fetch(APIFILEUPDATE_URL + 'upload', {
+    method: 'POST',
+    body: imgData
+  })
+    .then(res => {
+      res.json()
+      alert('Usuario Modificado con exito')})
+    .then(res => console.log(res))
+  location.href = 'index.html'
+}
+
+const imgNotChange = (data) => {
+  // ------imagen de perfil
+  const imgName = data.imgProfile
+
+  // ------datos del usuario
+  const usuario = document.forms['usuario']
+  const id = usuario['userId'].value
+  const nom = usuario['nom'].value
+  const lastName = usuario['lastNam'].value
+  const mail = usuario['mail'].value
+  let statusInt = usuario['status'].value
+  var statusbol = false
   const rolIdSt = usuario['selRole'].value
   const rolId = parseInt(rolIdSt)
   var combo = document.getElementById('selRole')
   var rolName = combo.options[combo.selectedIndex].text
 
-  const imgData = new FormData()
-  imgData.append('files', img); // , 'profile-image-id_' + 1 + '.' + ext
-
-  switch (statusInt) {
-    case 1:
-      status = true
-      break
-    case 0:
-      status = false
-  }
+  if (statusInt == 1)
+    statusbol = true
+  else
+    statusbol = false
 
   const dataForm = {
+    userId: id,
     userName: nom,
     userLastName: lastName,
     userEmail: mail,
-    status: status,
+    status: statusbol,
     imgProfile: imgName,
     role: [
       {
@@ -113,17 +193,18 @@ function editarUsuario () {
       }
     ]
   }
-
   console.log(dataForm)
-  console.log(imgUpFile)
-
-/*fetch(url + 'user', {
-  method: 'POST',
-  body: JSON.stringify(dataForm),
-  headers: {
-    'Content-Type': 'application/json'
-  }
-})
-  .then(res => res.json())
-  .then(res => console.log('Success:', res))*/
+  // --------modifica los datos en el servidor
+  fetch(url + 'user', {
+    method: 'POST',
+    body: JSON.stringify(dataForm),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+    .then(res => {
+      console.log('Success:', res)
+      alert('Usuario Modificado con exito')
+    })
+  location.href = 'index.html'
 }
