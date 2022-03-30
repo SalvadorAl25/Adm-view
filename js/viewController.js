@@ -1,6 +1,6 @@
 // ---------------------url's de API's---------------------
-const url = 'http://localhost:8018/api/'
-const APIFILEUPDATE_URL = 'http://localhost:8018/file/'
+const url = 'https://api-users-jsaa.herokuapp.com/api/'
+const APIFILEUPDATE_URL = 'https://api-users-jsaa.herokuapp.com/file/'
 var URLsearch = window.location.search
 let id = URLsearch.slice(4)
 
