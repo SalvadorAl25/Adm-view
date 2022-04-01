@@ -1,0 +1,100 @@
+[
+    {
+        "userId": 14,
+        "userName": "Saul",
+        "userLastName": "Higareda",
+        "userEmail": "saul@mail.com",
+        "status": true,
+        "imgProfile": "profile-image-id_saul@mail.com_Administrador.jpg",
+        "role": [
+            {
+                "roleId": 4,
+                "roleName": "Administrador"
+            }
+        ]
+    },
+    {
+        "userId": 24,
+        "userName": "Raul",
+        "userLastName": "Suarez",
+        "userEmail": "raul@mail.com",
+        "status": true,
+        "imgProfile": "profile-image-id_raul@mail.com_Recursos Humanos.jpg",
+        "role": [
+            {
+                "roleId": 14,
+                "roleName": "Recursos Humanos"
+            }
+        ]
+    },
+    {
+        "userId": 34,
+        "userName": "Miriam",
+        "userLastName": "Rodrigez",
+        "userEmail": "miriam@mail.com",
+        "status": true,
+        "imgProfile": "profile-image-id_miriam@mail.com_Contabilidad.jpg",
+        "role": [
+            {
+                "roleId": 24,
+                "roleName": "Contabilidad"
+            }
+        ]
+    },
+    {
+        "userId": 44,
+        "userName": "Fernando",
+        "userLastName": "Zapien",
+        "userEmail": "fer@mail.com",
+        "status": false,
+        "imgProfile": "profile-image-id_fer@mail.com_Almacen.jpg",
+        "role": [
+            {
+                "roleId": 44,
+                "roleName": "Almacen"
+            }
+        ]
+    },
+    {
+        "userId": 54,
+        "userName": "Jose Luis",
+        "userLastName": "Morales",
+        "userEmail": "jose@mail.com",
+        "status": true,
+        "imgProfile": "profile-image-id_jose@mail.com_Sistemas.jpg",
+        "role": [
+            {
+                "roleId": 34,
+                "roleName": "Sistemas"
+            }
+        ]
+    },
+    {
+        "userId": 64,
+        "userName": "Paulina",
+        "userLastName": "Villaseñor",
+        "userEmail": "pau@mail.com",
+        "status": false,
+        "imgProfile": "profile-image-id_pau@mail.com_Calidad.jpg",
+        "role": [
+            {
+                "roleId": 64,
+                "roleName": "Calidad"
+            }
+        ]
+    },
+    {
+        "userId": 74,
+        "userName": "Juan Luis",
+        "userLastName": "Espinoza",
+        "userEmail": "juan@mail.com",
+        "status": false,
+        "imgProfile": "profile-image-id_juan@mail.com_Sistemas.jpg",
+        "role": [
+            {
+                "roleId": 34,
+                "roleName": "Sistemas"
+            }
+        ]
+    }
+]

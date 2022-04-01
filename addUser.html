@@ -40,7 +40,7 @@
                                 btn-outline-primary">Seleccionar</label>
                         </div>
                     </div>
-                    <form id="usuario">
+                    <form id="usuario" class="needs-validation" novalidate>
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control"
                                 placeholder="Nombre" name="nombre" id="nom">
@@ -59,16 +59,16 @@
                         </div>
                         <div class="input-group">
                             <div class="col-5 me-3">
-                                <select class="form-select" id="status">
-                                    <option selected>Estatus</option>
+                                <select class="form-select" id="status" required>
+                                    <option selected disabled value="">Estatus</option>
                                     <option value=1>Activo</option>
                                     <option value=0>Inactivo</option>
                                 </select>
                             </div>
                             <div class="col-6">
                                 <select class="form-select" name="roles"
-                                    id="selRole">
-                                    <option selected>Area</option>
+                                    id="selRole" required>
+                                    <option selected disabled value=0>Area</option>
                                     <option value=1>Administrador</option>
                                     <option value=2>Recursos Humanos</option>
                                     <option value=3>Contabilidad</option>
@@ -78,6 +78,9 @@
                                     <option value=7>Calidad</option>
                                     <option value=8>Mantenimiento</option>
                                 </select>
+                                <div class="invalid-feedback">
+                                    Seleccione una area.
+                                </div>
                             </div>
                         </div>
                     </form>

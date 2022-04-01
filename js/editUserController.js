@@ -89,13 +89,14 @@ const imgChange = (data) => {
       .then(response => response.blob())
       .then(data => console.log(data))
       .catch(e => console.log(e))
-  }
+    
 
+  }
 
   // ------imagen de perfil
   const img = imgUp.files[0]
   const imgName = img.name
-  const nameFile = imgName.name.split('.')
+  const nameFile = imgName.split('.')
   const ext = nameFile[1]
 
   // ------datos del usuario
@@ -110,10 +111,10 @@ const imgChange = (data) => {
   const rolId = parseInt(rolIdSt)
   var combo = document.getElementById('selRole')
   var rolName = combo.options[combo.selectedIndex].text
-  var newNameImg ='profile-image-id_' + id+'_'+rolName + '.' + ext;
+  var newNameImg = 'profile-image-id_' + id + '_' + rolName + '.' + ext
 
   const imgData = new FormData()
-  imgData.append('files', img,newNameImg);
+  imgData.append('files', img, newNameImg)
 
   if (statusInt == 1)
     statusbol = true
@@ -134,7 +135,6 @@ const imgChange = (data) => {
       }
     ]
   }
-  console.log(dataForm)
   // --------modifica los datos en el servidor
   fetch(url + 'user', {
     method: 'POST',
@@ -193,7 +193,6 @@ const imgNotChange = (data) => {
       }
     ]
   }
-  console.log(dataForm)
   // --------modifica los datos en el servidor
   fetch(url + 'user', {
     method: 'POST',
