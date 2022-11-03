@@ -1,6 +1,5 @@
 [
     {
-        "userId": 14,
         "userName": "Saul",
         "userLastName": "Higareda",
         "userEmail": "saul@mail.com",
@@ -8,13 +7,12 @@
         "imgProfile": "profile-image-id_saul@mail.com_Administrador.jpg",
         "role": [
             {
-                "roleId": 4,
+                "roleId": 1,
                 "roleName": "Administrador"
             }
         ]
     },
     {
-        "userId": 24,
         "userName": "Raul",
         "userLastName": "Suarez",
         "userEmail": "raul@mail.com",
@@ -22,13 +20,12 @@
         "imgProfile": "profile-image-id_raul@mail.com_Recursos Humanos.jpg",
         "role": [
             {
-                "roleId": 14,
+                "roleId": 2,
                 "roleName": "Recursos Humanos"
             }
         ]
     },
     {
-        "userId": 34,
         "userName": "Miriam",
         "userLastName": "Rodrigez",
         "userEmail": "miriam@mail.com",
@@ -36,13 +33,12 @@
         "imgProfile": "profile-image-id_miriam@mail.com_Contabilidad.jpg",
         "role": [
             {
-                "roleId": 24,
+                "roleId": 3,
                 "roleName": "Contabilidad"
             }
         ]
     },
     {
-        "userId": 44,
         "userName": "Fernando",
         "userLastName": "Zapien",
         "userEmail": "fer@mail.com",
@@ -50,13 +46,12 @@
         "imgProfile": "profile-image-id_fer@mail.com_Almacen.jpg",
         "role": [
             {
-                "roleId": 44,
+                "roleId": 5,
                 "roleName": "Almacen"
             }
         ]
     },
     {
-        "userId": 54,
         "userName": "Jose Luis",
         "userLastName": "Morales",
         "userEmail": "jose@mail.com",
@@ -64,13 +59,12 @@
         "imgProfile": "profile-image-id_jose@mail.com_Sistemas.jpg",
         "role": [
             {
-                "roleId": 34,
+                "roleId": 4,
                 "roleName": "Sistemas"
             }
         ]
     },
     {
-        "userId": 64,
         "userName": "Paulina",
         "userLastName": "Villaseñor",
         "userEmail": "pau@mail.com",
@@ -78,13 +72,12 @@
         "imgProfile": "profile-image-id_pau@mail.com_Calidad.jpg",
         "role": [
             {
-                "roleId": 64,
+                "roleId": 7,
                 "roleName": "Calidad"
             }
         ]
     },
     {
-        "userId": 74,
         "userName": "Juan Luis",
         "userLastName": "Espinoza",
         "userEmail": "juan@mail.com",
@@ -92,7 +85,7 @@
         "imgProfile": "profile-image-id_juan@mail.com_Sistemas.jpg",
         "role": [
             {
-                "roleId": 34,
+                "roleId": 4,
                 "roleName": "Sistemas"
             }
         ]
