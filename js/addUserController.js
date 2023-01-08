@@ -58,23 +58,22 @@ function saveNewUser () {
 
   console.log(dataForm)
 // ------Envio de datos----
-/*fetch(url + 'user', {
-  method: 'POST',
-  body: JSON.stringify(dataForm),
-  headers: {
-    'Content-Type': 'application/json'
-  }
-})
-  .then(res => console.log('Success:', res))
+
+  fetch(url + 'user', {
+    method: 'POST',
+    body: JSON.stringify(dataForm),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }).then(res => console.log('Success:', res))
 
 //---------envio de imagen al servidor-------
-fetch(APIFILEUPDATE_URL + 'upload', {
-  method: 'POST',
-  body: imgData
-})
-  .then(res => {
-    res.json()
-    alert('Usuario Agregado con exito')})
-  .then(res => console.log(res))
-location.href = 'index.html'*/
+  fetch(APIFILEUPDATE_URL + 'upload', {
+    method: 'POST',
+    body: imgData
+  }).then(res => {
+      res.json()
+      alert('Usuario Agregado con exito')})
+    .then(res => console.log(res))
+  location.href = 'Index.html'
 }

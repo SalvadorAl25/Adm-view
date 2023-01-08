@@ -154,7 +154,7 @@ const imgChange = (data) => {
       res.json()
       alert('Usuario Modificado con exito')})
     .then(res => console.log(res))
-  location.href = 'index.html'
+  location.href = 'Index.html'
 }
 
 const imgNotChange = (data) => {
@@ -205,5 +205,5 @@ const imgNotChange = (data) => {
       console.log('Success:', res)
       alert('Usuario Modificado con exito')
     })
-  location.href = 'index.html'
+  location.href = './Index.html'
 }
