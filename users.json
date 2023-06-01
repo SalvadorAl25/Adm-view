@@ -5,12 +5,10 @@
         "userEmail": "saul@mail.com",
         "status": true,
         "imgProfile": "profile-image-id_saul@mail.com_Administrador.jpg",
-        "role": [
-            {
-                "roleId": 1,
-                "roleName": "Administrador"
-            }
-        ]
+        "role": {
+            "roleId": 1,
+            "roleName": "Administrador"
+        }
     },
     {
         "userName": "Raul",
@@ -18,12 +16,10 @@
         "userEmail": "raul@mail.com",
         "status": true,
         "imgProfile": "profile-image-id_raul@mail.com_Recursos Humanos.jpg",
-        "role": [
-            {
-                "roleId": 2,
-                "roleName": "Recursos Humanos"
-            }
-        ]
+        "role": {
+            "roleId": 2,
+            "roleName": "Recursos Humanos"
+        }
     },
     {
         "userName": "Miriam",
@@ -31,12 +27,10 @@
         "userEmail": "miriam@mail.com",
         "status": true,
         "imgProfile": "profile-image-id_miriam@mail.com_Contabilidad.jpg",
-        "role": [
-            {
-                "roleId": 3,
-                "roleName": "Contabilidad"
-            }
-        ]
+        "role": {
+            "roleId": 3,
+            "roleName": "Contabilidad"
+        }
     },
     {
         "userName": "Fernando",
@@ -44,12 +38,10 @@
         "userEmail": "fer@mail.com",
         "status": false,
         "imgProfile": "profile-image-id_fer@mail.com_Almacen.jpg",
-        "role": [
-            {
-                "roleId": 5,
-                "roleName": "Almacen"
-            }
-        ]
+        "role": {
+            "roleId": 5,
+            "roleName": "Almacen"
+        }
     },
     {
         "userName": "Jose Luis",
@@ -57,12 +49,10 @@
         "userEmail": "jose@mail.com",
         "status": true,
         "imgProfile": "profile-image-id_jose@mail.com_Sistemas.jpg",
-        "role": [
-            {
-                "roleId": 4,
-                "roleName": "Sistemas"
-            }
-        ]
+        "role": {
+            "roleId": 4,
+            "roleName": "Sistemas"
+        }
     },
     {
         "userName": "Paulina",
@@ -70,12 +60,10 @@
         "userEmail": "pau@mail.com",
         "status": false,
         "imgProfile": "profile-image-id_pau@mail.com_Calidad.jpg",
-        "role": [
-            {
-                "roleId": 7,
-                "roleName": "Calidad"
-            }
-        ]
+        "role": {
+            "roleId": 7,
+            "roleName": "Calidad"
+        }
     },
     {
         "userName": "Juan Luis",
@@ -83,11 +71,9 @@
         "userEmail": "juan@mail.com",
         "status": false,
         "imgProfile": "profile-image-id_juan@mail.com_Sistemas.jpg",
-        "role": [
-            {
-                "roleId": 4,
-                "roleName": "Sistemas"
-            }
-        ]
+        "role": {
+            "roleId": 4,
+            "roleName": "Sistemas"
+        }
     }
 ]

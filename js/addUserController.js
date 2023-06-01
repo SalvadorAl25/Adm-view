@@ -28,6 +28,7 @@ function saveNewUser () {
   if (imgUp.files[0] == undefined) {
     newNameImg = null
   }else {
+    console.log(imgUp)
     const img = imgUp.files[0]
     const imgName = img.name
     const nameFile = imgName.split('.')

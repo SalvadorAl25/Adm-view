@@ -20,7 +20,7 @@ fetch(url + "users", {
 
 const mostrarData = (data) => {
     let body = ''
-    let role = [];
+    let role = {};
     for (let i = 0; i < data.length; i++) {
         role = data[i].role;
         let stat
@@ -36,7 +36,7 @@ const mostrarData = (data) => {
                 <td scope="col">${data[i].userName}</td>
                 <td>${data[i].userLastName}</td>
                 <td>${data[i].userEmail}</td>
-                <td>${role[0].roleName}</td>
+                <td>${role.roleName}</td>
                 <td>${stat}</td>
                 <td>
                 <button type="button" onClick="deleteUser(${data[i].userId})" class="btn btn-outline-danger"><i class="fa-solid fa-trash-can"></i></button>
