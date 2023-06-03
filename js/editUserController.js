@@ -18,6 +18,12 @@ const mostrarData = (data) => {
   let lastName = data.userLastName
   let email = data.userEmail
   let status = data.status
+  let dateBirthday = data.dateBirthday
+  let country = data.country
+  let state = data.state
+  let city = data.city
+  let address = data.address
+  let rfc = data.rfc
   let sta = 0
 
   switch (status) {
@@ -30,7 +36,7 @@ const mostrarData = (data) => {
   }
 
   let imgName = data.imgProfile
-  let role = data.role[0]
+  let role = data.role
   let roleId = role.roleId
 
   document.getElementById('userId').value = id
@@ -39,6 +45,12 @@ const mostrarData = (data) => {
   document.getElementById('mail').value = email
   document.getElementById('selRole').value = roleId
   document.getElementById('status').value = sta
+  document.getElementById('dateBirthday').value = dateBirthday
+  document.getElementById('country').value = country
+  document.getElementById('state').value = state
+  document.getElementById('city').value = city
+  document.getElementById('address').value = address
+  document.getElementById('rfc').value = rfc
 }
 
 const mostrarImg = (data) => {
@@ -107,6 +119,12 @@ const imgChange = (data) => {
   const mail = usuario['mail'].value
   let statusInt = usuario['status'].value
   var statusbol = false
+  const birthday = usuario['dateBirthday'].value
+  const country = usuario['country'].value
+  const state = usuario['state'].value
+  const city = usuario['city'].value
+  const rfc = usuario['rfc'].value
+  const address = usuario['address'].value
   const rolIdSt = usuario['selRole'].value
   const rolId = parseInt(rolIdSt)
   var combo = document.getElementById('selRole')
@@ -128,12 +146,18 @@ const imgChange = (data) => {
     userEmail: mail,
     status: statusbol,
     imgProfile: newNameImg,
-    role: [
+    dateBirthday:birthday,
+    country:country,
+    state:state,
+    city:city,
+    address:address,
+    rfc:rfc,
+    role: 
       {
         roleId: rolId,
         roleName: rolName
       }
-    ]
+    
   }
   // --------modifica los datos en el servidor
   fetch(url + 'user', {
@@ -154,7 +178,7 @@ const imgChange = (data) => {
       res.json()
       alert('Usuario Modificado con exito')})
     .then(res => console.log(res))
-  location.href = 'Index.html'
+  location.href = 'users.html'
 }
 
 const imgNotChange = (data) => {
@@ -169,6 +193,12 @@ const imgNotChange = (data) => {
   const mail = usuario['mail'].value
   let statusInt = usuario['status'].value
   var statusbol = false
+  const birthday = usuario['dateBirthday'].value
+  const country = usuario['country'].value
+  const state = usuario['state'].value
+  const city = usuario['city'].value
+  const rfc = usuario['rfc'].value
+  const address = usuario['address'].value
   const rolIdSt = usuario['selRole'].value
   const rolId = parseInt(rolIdSt)
   var combo = document.getElementById('selRole')
@@ -186,12 +216,18 @@ const imgNotChange = (data) => {
     userEmail: mail,
     status: statusbol,
     imgProfile: imgName,
-    role: [
+    dateBirthday:birthday,
+    country:country,
+    state:state,
+    city:city,
+    address:address,
+    rfc:rfc,
+    role: 
       {
         roleId: rolId,
         roleName: rolName
       }
-    ]
+    
   }
   // --------modifica los datos en el servidor
   fetch(url + 'user', {
@@ -205,5 +241,9 @@ const imgNotChange = (data) => {
       console.log('Success:', res)
       alert('Usuario Modificado con exito')
     })
-  location.href = './Index.html'
+  location.href = './users.html'
+}
+
+function cancelButton () {
+  location.href = 'viewUser.html?id=' + id
 }

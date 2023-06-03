@@ -76,5 +76,5 @@ function saveNewUser () {
       res.json()
       alert('Usuario Agregado con exito')})
     .then(res => console.log(res))
-  location.href = 'Index.html'
+  location.href = 'users.html'
 }

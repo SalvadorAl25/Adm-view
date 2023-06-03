@@ -1,79 +1,128 @@
 [
     {
         "userName": "Saul",
-        "userLastName": "Higareda",
+        "userLastName": "Higareda Medina",
         "userEmail": "saul@mail.com",
         "status": true,
         "imgProfile": "profile-image-id_saul@mail.com_Administrador.jpg",
+        "dateBirthday": "1992-05-11",
+        "country": "Mexico",
+        "state": "Distrito Federal",
+        "city": "Benito Juarez",
+        "address": "Circuito Interior (Avenida Patriotismo) #229",
+        "rfc": "HIMS920511JSA",
         "role": {
             "roleId": 1,
             "roleName": "Administrador"
-        }
+        },
+        "scheduleEntity": null
     },
     {
         "userName": "Raul",
-        "userLastName": "Suarez",
+        "userLastName": "Suarez Rosales",
         "userEmail": "raul@mail.com",
         "status": true,
         "imgProfile": "profile-image-id_raul@mail.com_Recursos Humanos.jpg",
+        "dateBirthday": "1990-12-25",
+        "country": "Mexico",
+        "state": "Colima",
+        "city": "Coquimatlan",
+        "address": "Carr. Colima - Coquimatlan km 8.5",
+        "rfc": "SURR9012259S10",
         "role": {
             "roleId": 2,
             "roleName": "Recursos Humanos"
-        }
+        },
+        "scheduleEntity": null
     },
     {
         "userName": "Miriam",
-        "userLastName": "Rodrigez",
+        "userLastName": "Rodrigez Catalan",
         "userEmail": "miriam@mail.com",
         "status": true,
         "imgProfile": "profile-image-id_miriam@mail.com_Contabilidad.jpg",
+        "dateBirthday": "1989-07-24",
+        "country": "Mexico",
+        "state": "Guanajuato",
+        "city": "Leon",
+        "address": "Belisario Dominguz 117",
+        "rfc": "ROCM890724UW10",
         "role": {
             "roleId": 3,
             "roleName": "Contabilidad"
-        }
+        },
+        "scheduleEntity": null
     },
     {
         "userName": "Fernando",
-        "userLastName": "Zapien",
+        "userLastName": "Zapien Salas",
         "userEmail": "fer@mail.com",
         "status": false,
         "imgProfile": "profile-image-id_fer@mail.com_Almacen.jpg",
+        "dateBirthday": "1997-05-19",
+        "country": "Mexico",
+        "state": "Nuevo Leon",
+        "city": "Monterrey",
+        "address": "Bolivia 203",
+        "rfc": "ZASF9705194J5",
         "role": {
             "roleId": 5,
             "roleName": "Almacen"
-        }
+        },
+        "scheduleEntity": null
     },
     {
         "userName": "Jose Luis",
-        "userLastName": "Morales",
+        "userLastName": "Morales Olivera",
         "userEmail": "jose@mail.com",
         "status": true,
         "imgProfile": "profile-image-id_jose@mail.com_Sistemas.jpg",
+        "dateBirthday": "2004-01-06",
+        "country": "Mexico",
+        "state": "Tamaulipas",
+        "city": "Tampico",
+        "address": "Av Hidalgo 1915",
+        "rfc": "MOOL0401068W9",
         "role": {
             "roleId": 4,
             "roleName": "Sistemas"
-        }
+        },
+        "scheduleEntity": null
     },
     {
         "userName": "Paulina",
-        "userLastName": "Villaseñor",
+        "userLastName": "Villaseñor Acosta",
         "userEmail": "pau@mail.com",
         "status": false,
         "imgProfile": "profile-image-id_pau@mail.com_Calidad.jpg",
+        "dateBirthday": "1994-03-17",
+        "country": "Mexico",
+        "state": "Jalisco",
+        "city": "Atotonilco El Alto",
+        "address": "Av South San Francisco 159",
+        "rfc": "VIAP940317QD3",
         "role": {
             "roleId": 7,
             "roleName": "Calidad"
-        }
+        },
+        "scheduleEntity": null
     },
     {
         "userName": "Juan Luis",
-        "userLastName": "Espinoza",
+        "userLastName": "Espinoza Alvarez",
         "userEmail": "juan@mail.com",
         "status": false,
         "imgProfile": "profile-image-id_juan@mail.com_Sistemas.jpg",
+        "dateBirthday": "1994-11-18",
+        "country": "Mexico",
+        "state": "Distrito Federal",
+        "city": "Benito Juarez",
+        "address": "Av Cuauhtemoc 462",
+        "rfc": "EIAJ941118K62",
         "role": {
             "roleId": 4,
             "roleName": "Sistemas"
-        }
+        },
+        "scheduleEntity": null
     }
 ]

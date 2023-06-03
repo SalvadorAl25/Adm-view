@@ -14,10 +14,17 @@ fetch(url + 'user/' + id, {
   .catch(e => console.log(e))
 
 const mostrarData = (data) => {
+  console.log(data)
   let name = data.userName
   let lastName = data.userLastName
   let email = data.userEmail
   let status = data.status
+  let dateBirthday = data.dateBirthday
+  let country = data.country
+  let state = data.state
+  let city = data.city
+  let address = data.address
+  let rfc = data.rfc
   let sta = ''
 
   switch (status) {
@@ -30,13 +37,19 @@ const mostrarData = (data) => {
   }
 
   let imgName = data.imgProfile
-  let roleName = data.role[0].roleName
+  let roleName = data.role.roleName
 
   document.getElementById('name').value = name
   document.getElementById('lastName').value = lastName
   document.getElementById('email').value = email
   document.getElementById('roleName').value = roleName
   document.getElementById('status').value = sta
+  document.getElementById('dateBirthday').value = dateBirthday
+  document.getElementById('country').value = country
+  document.getElementById('state').value = state
+  document.getElementById('city').value = city
+  document.getElementById('address').value = address
+  document.getElementById('rfc').value = rfc
 }
 
 const mostrarImg = (data) => {
