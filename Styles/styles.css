@@ -54,3 +54,17 @@ header{
     -moz-border-radius: 10px 10px 10px 10px;
     border: 2px solid #1d55ca;
 }
+
+footer {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(13,25,184,1) 45%, rgba(0,212,255,1) 100%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+  }
